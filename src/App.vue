@@ -4,31 +4,31 @@ import { reactive, ref, onMounted, toRef } from 'vue'
 let animals: {name: string, picUrl: string}[] = [
   {
     name: 'UNDERBITE',
-    picUrl: 'src/assets/animalsAvatar/UNDERBITE.png'
+    picUrl: './assets/animalsAvatar/UNDERBITE.png'
   },
   {
     name: 'NEMO',
-    picUrl: 'src/assets/animalsAvatar/NEMO.png'
+    picUrl: './assets/animalsAvatar/NEMO.png'
   },
   {
     name: 'TIGER',
-    picUrl: 'src/assets/animalsAvatar/TIGER.png'
+    picUrl: './assets/animalsAvatar/TIGER.png'
   },
   {
     name: 'MACCHIATO',
-    picUrl: 'src/assets/animalsAvatar/MACCHIATO.png'
+    picUrl: './assets/animalsAvatar/MACCHIATO.png'
   },
   {
     name: 'OTTA',
-    picUrl: 'src/assets/animalsAvatar/OTTA.png'
+    picUrl: './assets/animalsAvatar/OTTA.png'
   },
   {
     name: 'MOS',
-    picUrl: 'src/assets/animalsAvatar/MOS.png'
+    picUrl: './assets/animalsAvatar/MOS.png'
   },
   {
     name: 'AGUA',
-    picUrl: 'src/assets/animalsAvatar/AGUA.png'
+    picUrl: './assets/animalsAvatar/AGUA.png'
   }
 ]
 let animalsThemeColor: string[] = ['#55562d', '#7a613d', '#8c7047', '#896739', '#796748', '#68503d', '#7a715a']
