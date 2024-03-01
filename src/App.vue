@@ -4,31 +4,31 @@ import { reactive, ref, onMounted, toRef } from 'vue'
 let animals: {name: string, picUrl: string}[] = [
   {
     name: 'UNDERBITE',
-    picUrl: 'src/assets/animalsAvatar/UNDERBITE.png'
+    picUrl: 'UNDERBITE.png'
   },
   {
     name: 'NEMO',
-    picUrl: 'src/assets/animalsAvatar/NEMO.png'
+    picUrl: 'NEMO.png'
   },
   {
     name: 'TIGER',
-    picUrl: 'src/assets/animalsAvatar/TIGER.png'
+    picUrl: 'TIGER.png'
   },
   {
     name: 'MACCHIATO',
-    picUrl: 'src/assets/animalsAvatar/MACCHIATO.png'
+    picUrl: 'MACCHIATO.png'
   },
   {
     name: 'OTTA',
-    picUrl: 'src/assets/animalsAvatar/OTTA.png'
+    picUrl: 'OTTA.png'
   },
   {
     name: 'MOS',
-    picUrl: 'src/assets/animalsAvatar/MOS.png'
+    picUrl: 'MOS.png'
   },
   {
     name: 'AGUA',
-    picUrl: 'src/assets/animalsAvatar/AGUA.png'
+    picUrl: 'AGUA.png'
   }
 ]
 let animalsThemeColor: string[] = ['#55562d', '#7a613d', '#8c7047', '#896739', '#796748', '#68503d', '#7a715a']
@@ -103,6 +103,9 @@ function scrollAndTouch(preX: number, currentX: number){
     movingBar.value.style.left = tempSetOffsetLeft + 'px'
   }
 }
+function getAssetsFile(url: string){
+  return new URL(`./assets/${url}`, import.meta.url).href
+}
 
 onMounted(() => {
   window.onresize = () => {
@@ -124,7 +127,7 @@ onMounted(() => {
           <div class="innerCircle" :style="{'--color': animalsThemeColor[index]}"></div>
           <div v-if="selectedArr[index]" class="selectedCircle"></div>
           <div class="animalCircle">
-            <img :src="animal.picUrl" :alt="animal.name" class="animalImg" draggable="false"/>
+            <img :src="getAssetsFile(animal.picUrl)" :alt="animal.name" class="animalImg" draggable="false"/>
           </div>
         </div>
       </div>
