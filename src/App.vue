@@ -44,7 +44,7 @@ let selectedArr = ref(selected)
 let touchPreX = ref(0)
 
 function move(): void{
-  if(selectedIndex.value === 0) {
+  if(selectedIndex.value === 0 || slideWidth < fixedWidth.value) {
     movingBar.value.style.left = '0px'
     return
   }
